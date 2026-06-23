@@ -14,10 +14,17 @@ export default defineNuxtConfig({
     },
   },
 
+  runtimeConfig: {
+    public: {
+      version: '1.0.0',
+    },
+  },
+
   modules: [
     "@nuxt/a11y",
     "@nuxtjs/tailwindcss",
     "nuxt-lucide-icons",
     "@nuxtjs/color-mode",
+    "@nuxt/image",
   ],
 });
