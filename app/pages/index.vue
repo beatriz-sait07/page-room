@@ -1,5 +1,5 @@
 <template>
-    <div class="h-lvh w-full" id="app">
+    <div class="h-full w-full" id="app">
         <main class="w-full h-full">
             <section class="w-full h-full text-gray-300 text-xs font-inter">
                 <article class="grid grid-cols-1 md:grid-cols-2 gap-4 h-2/3">
@@ -30,9 +30,9 @@
                         </NuxtLink>
                     </section>
                 </article>
-                <article class="grid grid-cols-1 md:grid-cols-[30%_1fr_30%] gap-4 w-full">
+                <article class="grid grid-cols-1 md:grid-cols-[30%_1fr_30%] gap-4 w-full h-1/4">
                     <img :src="imgDark" class="w-full object-cover h-full" />
-                    <section class="flex-1">
+                    <section class="flex-1 flex flex-col justify-center gap-4 ">
                         <h1 class="text-2xl font-bold">SOBRE NOSSOS MÓVEIS</h1>
                         <p>Nossa coleção multifuncional une design e funcionalidade para atender ao seu gosto pessoal.
                             Torne cada ambiente único ou escolha um tema coeso que melhor reflita seus interesses e o
@@ -44,7 +44,6 @@
                     <img :src="imgLight" class="w-full object-cover h-full" />
                 </article>
             </section>
-
         </main>
     </div>
 </template>
