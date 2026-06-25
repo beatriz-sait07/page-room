@@ -8,7 +8,7 @@
             <div v-if="isDesktop" class="flex max-w-1/2 w-1/2 h-30 min-h-30 items-center gap-">
                 <section class="flex-1">
                 <ul
-                    class="w-full grid grid-cols-3 gap-4 justify-center items-between text-gray-200 dark:text-gray-800 font-bold">
+class="w-full grid grid-cols-3 gap-4 justify-center items-between text-gray-200  font-bold">
                         <li v-for="item in menuList" :key="item.name" class="relative text-center inline-block
                     after:content-[''] after:absolute after:left-1/2 after:bottom-0
                     after:h-1 after:w-full after:bg-current
