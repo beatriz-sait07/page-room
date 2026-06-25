@@ -1,18 +1,17 @@
 <template>
-    <div class="h-[100lvh] w-full bg-black/40" id="app">
+    <div class="h-lvh w-full" id="app">
         <main class="w-full h-full">
-            <section class="w-full h-fit text-gray-300 text-xs font-inter">
-                <article class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <section>
+            <section class="w-full h-full text-gray-300 text-xs font-inter">
+                <article class="grid grid-cols-1 md:grid-cols-2 gap-4 h-2/3">
+                    <section class="flex flex-col justify-center items-center gap-4">
                         <UCarousel v-slot="{ item }" arrows
                             :items="isDesktop ? itemsCarrosselDesk : itemsCarrosselMobile"
-                            class="w-full max-w-xs mx-auto">
-                            <img :src="item" width="320" height="320" class="rounded-lg" loading="lazy">
+                            class="w-full max-w-xs mx-auto h-full">
+                            <img :src="item" width="100%" height="100%" class="object-cover" loading="lazy">
                         </UCarousel>
-
                     </section>
 
-                    <section class="flex flex-col justify-start">
+                    <section class="flex flex-col justify-center gap-4">
                         <h1 class="text-2xl font-bold">
                             Descubra maneiras inovadoras de decorar
                         </h1>
@@ -25,8 +24,9 @@
                             um reflexo de você e do que você ama.
                         </p>
 
-                        <NuxtLink to="/contato">
+                        <NuxtLink to="/contato" class="flex items-center gap-4 text-xl">
                             Entre em contato
+                            <MoveRight stroke-width="1px" width="36px" height="36px" />
                         </NuxtLink>
                     </section>
                 </article>
@@ -50,6 +50,7 @@
 </template>
 <script setup lang="ts">
 import { useMediaQuery } from '@vueuse/core'
+import { MoveRight } from '@lucide/vue';
 const isDesktop = useMediaQuery('(min-width: 768px)')
 import hero1Desk from '~/assets/room-homepage-master/images/desktop-image-hero-1.jpg'
 import hero2Desk from '~/assets/room-homepage-master/images/desktop-image-hero-2.jpg'

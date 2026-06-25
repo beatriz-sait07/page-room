@@ -1,6 +1,6 @@
 <template>
     <div
-        class="bg-black/40 w-full flex relative justify-center md:justify-around items-center p-2 min-h-30 h-30 flex-1 rows-reverse">
+class="bg-transparent w-full flex justify-center md:justify-around items-center p-2 min-h-30 h-30 flex-1">
         <section class="w-20 h-fit">
             <img src="../assets/room-homepage-master/images/logo.svg" width="100" height="40" alt="Logo" />
         </section>
@@ -28,6 +28,7 @@
                 </div>
             </Transition>
         </section>
+        <UColorModeSwitch />
     </div>
 </template>
 

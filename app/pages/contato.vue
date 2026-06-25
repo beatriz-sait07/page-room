@@ -1,5 +1,5 @@
 <template>
-    <main class="mx-auto w-full max-w-5xl px-6 py-12 grid gap-6 items-center ">
+    <main class="mx-auto w-full max-w-5xl px-6 py-12 grid gap-6 items-center mt-16">
         <h1 class="text-3xl font-semibold text-center">Contato</h1>
         <p class="text-neutral-300">Fale comigo por um dos canais abaixo.</p>
 
