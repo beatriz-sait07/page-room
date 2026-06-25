@@ -1,15 +1,14 @@
 <template>
-    <!-- flex-1 flex flex-row-reverse md:flex-row justify-between items-center" -->
-    <div class=" w-full min-h-30 flex justify-center items-center flex-row-reverse
+    <div class=" w-full min-h-30 flex justify-center items-center flex-row-reverse px-6
     md:flex-row md:justify-between
     ">
-        <!-- <section class=""> -->
             <section class="w-20 h-fit">
                 <img src="../assets/room-homepage-master/images/logo.svg" width="100" height="40" alt="Logo" />
             </section>
             <div v-if="isDesktop" class="flex max-w-1/2 w-1/2 h-30 min-h-30 items-center gap-">
                 <section class="flex-1">
-                <ul class="w-full grid grid-cols-3 gap-4 justify-center items-between text-gray-800 dark:text-gray-200">
+                <ul
+class="w-full grid grid-cols-3 gap-4 justify-center items-between text-gray-200  font-bold">
                         <li v-for="item in menuList" :key="item.name" class="relative text-center inline-block
                     after:content-[''] after:absolute after:left-1/2 after:bottom-0
                     after:h-1 after:w-full after:bg-current
@@ -27,13 +26,12 @@
                 class="absolute top-1/2 left-3 -translate-y-1/2" />
                 <Transition v-else name="menu-slide">
                     <div ref="menuRef">
-                        <MenuHamburguer :menuAberto="menuAberto" :listaMenu="menuList"
+                    <MenuHamburguer :menuAberto="menuAberto" :listaMenu="menuList"
+                        :colorX="colorMode.value === 'dark' ? 'white' : 'black'"
                             @update:menuAberto="menuAberto = $event" />
                     </div>
                 </Transition>
-            </section>
-
-        <!-- </section> -->
+        </section>
     </div>
 </template>
 
