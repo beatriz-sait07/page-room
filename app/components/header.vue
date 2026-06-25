@@ -1,34 +1,35 @@
 <template>
-    <div
-class="bg-transparent w-full flex justify-center md:justify-around items-center p-2 min-h-30 h-30 flex-1">
-        <section class="w-20 h-fit">
-            <img src="../assets/room-homepage-master/images/logo.svg" width="100" height="40" alt="Logo" />
-        </section>
-        <div v-if="isDesktop" class="flex max-w-1/2 w-1/2 h-30 min-h-30 items-center gap-">
-            <section class="flex-1">
-                <ul class="w-full grid grid-cols-3 gap-4 justify-center items-between text-gray-200">
-                    <li v-for="item in menuList" :key="item.name" class="relative text-center inline-block
-                        after:content-[''] after:absolute after:left-1/2 after:bottom-0
-                        after:h-1 after:w-full after:bg-current
-                        after:origin-center after:scale-x-0
-                        after:-translate-x-1/2
-                        after:transition-transform after:duration-300
-                        hover:after:scale-x-100 w-fit">
-                        <NuxtLink :to="item.link">{{ item.name }}</NuxtLink>
-                    </li>
-                </ul>
+    <div class="bg-transparent w-full flex justify-center md:justify-between items-center px-4 py-2 min-h-30 ">
+        <section class="flex-1 flex flex-row-reverse md:flex-row justify-between items-center">
+            <section class="w-20 h-fit">
+                <img src="../assets/room-homepage-master/images/logo.svg" width="100" height="40" alt="Logo" />
             </section>
-        </div>
-        <section v-else class="w-4">
-            <Menu v-if="!menuAberto" @click="toggleMenu" class="text-gray-200" />
-            <Transition v-else name="menu-slide">
-                <div ref="menuRef">
-                    <MenuHamburguer :menuAberto="menuAberto" :listaMenu="menuList"
-                        @update:menuAberto="menuAberto = $event" />
-                </div>
-            </Transition>
+            <div v-if="isDesktop" class="flex max-w-1/2 w-1/2 h-30 min-h-30 items-center gap-">
+                <section class="flex-1">
+                    <ul class="w-full grid grid-cols-3 gap-4 justify-center items-between text-gray-200">
+                        <li v-for="item in menuList" :key="item.name" class="relative text-center inline-block
+                    after:content-[''] after:absolute after:left-1/2 after:bottom-0
+                    after:h-1 after:w-full after:bg-current
+                    after:origin-center after:scale-x-0
+                    after:-translate-x-1/2
+                    after:transition-transform after:duration-300
+                    hover:after:scale-x-100 w-fit">
+                            <NuxtLink :to="item.link">{{ item.name }}</NuxtLink>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <section v-else class="w-4">
+                <Menu v-if="!menuAberto" @click="toggleMenu" class="text-gray-200" />
+                <Transition v-else name="menu-slide">
+                    <div ref="menuRef">
+                        <MenuHamburguer :menuAberto="menuAberto" :listaMenu="menuList"
+                            @update:menuAberto="menuAberto = $event" />
+                    </div>
+                </Transition>
+            </section>
+
         </section>
-        <UColorModeSwitch />
     </div>
 </template>
 
