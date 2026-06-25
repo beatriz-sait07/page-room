@@ -1,9 +1,9 @@
 <template>
   <UApp>
     <div class="h-lvh flex flex-col">
-      <div class="flex w-full relative">
-        <Header class="fixed top-0 left-0 z-100 h-30 w-full md:max-w-[60%]" />
-        <UColorModeSwitch class="w-10 absolute top-0 right-0 m-2" />
+      <div class="flex w-full relative h-fit">
+        <Header class="fixed top-0 left-0 z-20 w-full md:max-w-[60%]" />
+        <UColorModeSwitch class="w-10 absolute top-0 right-0 m-2 z-30" />
       </div>
       <main class="flex-1">
         <NuxtPage />

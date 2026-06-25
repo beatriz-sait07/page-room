@@ -1,6 +1,9 @@
 <template>
-    <div class="bg-transparent w-full flex justify-center items-center px-4 py-2 min-h-30 font-bold">
-        <section class="flex-1 flex flex-row-reverse md:flex-row justify-between items-center">
+    <!-- flex-1 flex flex-row-reverse md:flex-row justify-between items-center" -->
+    <div class=" w-full min-h-30 flex justify-center items-center flex-row-reverse
+    md:flex-row md:justify-between
+    ">
+        <!-- <section class=""> -->
             <section class="w-20 h-fit">
                 <img src="../assets/room-homepage-master/images/logo.svg" width="100" height="40" alt="Logo" />
             </section>
@@ -19,8 +22,9 @@
                     </ul>
                 </section>
             </div>
-            <section v-else class="relative w-full">
-                <Menu v-if="!menuAberto" @click="toggleMenu" class="text-gray-200 absolute top-1/2 left-3" />
+        <section v-else class="w-8">
+            <Menu v-if="!menuAberto" @click="toggleMenu"
+                class="text-gray-200 absolute top-1/2 left-3 -translate-y-1/2" />
                 <Transition v-else name="menu-slide">
                     <div ref="menuRef">
                         <MenuHamburguer :menuAberto="menuAberto" :listaMenu="menuList"
@@ -29,7 +33,7 @@
                 </Transition>
             </section>
 
-        </section>
+        <!-- </section> -->
     </div>
 </template>
 
