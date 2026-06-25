@@ -1,13 +1,14 @@
 <template>
     <div class="w-2/3 bg-black/80 z-1 h-screen absolute top-0 py-6 px-4 left-0" @click="toggleMenu">
-        <X @click="toggleMenu" class="text-gray-100 absolute left-3 top-6 -translate-y-1/2" />
-        <ul class="w-full grid grid-rows-3 gap-5 justify-center items-between text-gray-200">
+        <X @click="toggleMenu" class="text-gray-800 dark:text-gray-100 absolute left-3 top-6 -translate-y-1/2" />
+        <ul class="w-full grid grid-rows-3 gap-5 justify-center items-between text-gray-800 dark:text-gray-200">
             <li v-for="item in props.listaMenu" :key="item.name" class="relative text-center inline-block"
-                :class="props.listaMenu?.length ? 'border-b-2 border-gray-500' : ''">
+                :class="props.listaMenu?.length ? 'border-b-2 border-gray-500 dark:border-gray-300' : ''">
                 <NuxtLink :to="item.link">{{ item.name }}</NuxtLink>
             </li>
         </ul>
-        <p class="w-full text-[8px] text-gray-300 absolute bottom-3 text-center">v{{ nuxtConfig.public.version }}</p>
+        <p class="w-full text-[8px] text-gray-700 dark:text-gray-300 absolute bottom-3 text-center">v{{
+            nuxtConfig.public.version }}</p>
         <!-- backdrop-blur-md -->
     </div>
 </template>

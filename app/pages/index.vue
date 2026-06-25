@@ -1,7 +1,7 @@
 <template>
     <div class="h-full w-full" id="app">
         <main class="w-full h-full">
-            <section class="w-full h-full text-gray-300 text-xs font-inter">
+            <section class="w-full h-full text-gray-800 dark:text-gray-200 text-xs font-inter">
                 <article class="grid grid-cols-1 md:grid-cols-[60%_1fr] gap-4">
                     <section class="carousel-hero w-full h-full relative">
                         <UCarousel ref="carouselRef" v-slot="{ item }"
@@ -13,11 +13,11 @@
                         <div v-if="!isDesktop" class="absolute bottom-0 right-0 flex z-10 h-fit!">
                             <button @click="carouselRef?.emblaApi?.scrollPrev()"
                                 class="w-14 h-14 bg-black flex items-center justify-center hover:bg-neutral-700 transition-colors">
-                                <ChevronLeft class="text-white w-5 h-5" />
+                                <ChevronLeft class="text-gray-800 dark:text-gray-200 w-5 h-5" />
                             </button>
                             <button @click="carouselRef?.emblaApi?.scrollNext()"
                                 class="w-14 h-14 bg-black flex items-center justify-center hover:bg-neutral-700 transition-colors">
-                                <ChevronRight class="text-white w-5 h-5" />
+                                <ChevronRight class="text-gray-800 dark:text-gray-200 w-5 h-5" />
                             </button>
                         </div>
                     </section>
@@ -42,11 +42,11 @@
                         <div v-if="isDesktop" class="absolute bottom-0! -left-4 flex z-10">
                             <button @click="carouselRef?.emblaApi?.scrollPrev()"
                                 class="w-10 h-10 bg-black flex items-center justify-center hover:bg-neutral-700 transition-colors">
-                                <ChevronLeft class="text-white w-5 h-5" />
+                                <ChevronLeft class="text-gray-800 dark:text-gray-200 w-5 h-5" />
                             </button>
                             <button @click="carouselRef?.emblaApi?.scrollNext()"
                                 class="w-10 h-10 bg-black flex items-center justify-center hover:bg-neutral-700 transition-colors">
-                                <ChevronRight class="text-white w-5 h-5" />
+                                <ChevronRight class="text-gray-800 dark:text-gray-200 w-5 h-5" />
                             </button>
                         </div>
                     </section>
