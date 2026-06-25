@@ -1,6 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
+  css: ["./app/assets/css/main.css"],
+  vite: {
+    plugins: [tailwindcss()],
+  },
   devtools: { enabled: false },
   app: {
     head: {
@@ -16,15 +21,15 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      version: '1.0.0',
+      version: "1.0.0",
     },
   },
 
   modules: [
     "@nuxt/a11y",
-    "@nuxtjs/tailwindcss",
     "nuxt-lucide-icons",
     "@nuxtjs/color-mode",
     "@nuxt/image",
+    "@nuxt/ui",
   ],
 });
