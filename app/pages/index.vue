@@ -10,7 +10,7 @@
                             class="w-full h-full">
                             <img :src="item" class="w-full h-full object-cover block" loading="lazy">
                         </UCarousel>
-                        <div v-if="!isDesktop" class="absolute bottom-0 flex z-10">
+                        <div v-if="!isDesktop" class="absolute bottom-0 right-0 flex z-10 h-fit!">
                             <button @click="carouselRef?.emblaApi?.scrollPrev()"
                                 class="w-14 h-14 bg-black flex items-center justify-center hover:bg-neutral-700 transition-colors">
                                 <ChevronLeft class="text-white w-5 h-5" />

@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-transparent w-full flex justify-center md:justify-between items-center px-4 py-2 min-h-30 ">
+    <div class="bg-transparent w-full flex justify-center items-center px-4 py-2 min-h-30 font-bold">
         <section class="flex-1 flex flex-row-reverse md:flex-row justify-between items-center">
             <section class="w-20 h-fit">
                 <img src="../assets/room-homepage-master/images/logo.svg" width="100" height="40" alt="Logo" />
@@ -19,8 +19,8 @@
                     </ul>
                 </section>
             </div>
-            <section v-else class="w-4">
-                <Menu v-if="!menuAberto" @click="toggleMenu" class="text-gray-200" />
+            <section v-else class="relative w-full">
+                <Menu v-if="!menuAberto" @click="toggleMenu" class="text-gray-200 absolute top-1/2 left-3" />
                 <Transition v-else name="menu-slide">
                     <div ref="menuRef">
                         <MenuHamburguer :menuAberto="menuAberto" :listaMenu="menuList"
