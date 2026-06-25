@@ -1,5 +1,6 @@
 <template>
-    <div class="bg-black/40 w-full flex relative justify-center md:justify-around items-center p-2 min-h-30 h-30">
+    <div
+        class="bg-black/40 w-full flex relative justify-center md:justify-around items-center p-2 min-h-30 h-30 flex-1 rows-reverse">
         <section class="w-20 h-fit">
             <img src="../assets/room-homepage-master/images/logo.svg" width="100" height="40" alt="Logo" />
         </section>
@@ -8,7 +9,7 @@
                 <ul class="w-full grid grid-cols-3 gap-4 justify-center items-between text-gray-200">
                     <li v-for="item in menuList" :key="item.name" class="relative text-center inline-block
                         after:content-[''] after:absolute after:left-1/2 after:bottom-0
-                        after:h-[2px] after:w-full after:bg-current
+                        after:h-1 after:w-full after:bg-current
                         after:origin-center after:scale-x-0
                         after:-translate-x-1/2
                         after:transition-transform after:duration-300
@@ -18,8 +19,8 @@
                 </ul>
             </section>
         </div>
-        <section v-else class="absolute top-0 left-0 w-1/2">
-            <Menu v-if="!menuAberto" @click="toggleMenu" class="text-gray-200 m-2" />
+        <section v-else class="w-4">
+            <Menu v-if="!menuAberto" @click="toggleMenu" class="text-gray-200" />
             <Transition v-else name="menu-slide">
                 <div ref="menuRef">
                     <MenuHamburguer :menuAberto="menuAberto" :listaMenu="menuList"
