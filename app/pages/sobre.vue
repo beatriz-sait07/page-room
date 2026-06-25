@@ -14,6 +14,4 @@
 </template>
 
 <script setup lang="ts">
-import { ChevronLeft } from '@lucide/vue';
-import { C } from 'vue-router/dist/index-BQLwgiyK.js';
 </script>
